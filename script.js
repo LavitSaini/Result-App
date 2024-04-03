@@ -9,7 +9,6 @@ function displayStudentData(
   array = studentsData
 ) {
   let clutter = ``;
-  root.innerHTML = "";
   array.forEach((data) => {
     if (data.rollNo === Number(rollNumber)) {
       clutter += `<ul class="student-info">
@@ -59,7 +58,7 @@ function displayStudentData(
         <td>${data["Python (UGCA-1914)"]}</td>
       </tr>
       <tr>
-        <td>Data Structures (UGCA-1915)"</td>
+        <td>Data Structures (UGCA-1915)</td>
         <td>${data["Data Structures (UGCA-1915)"]}</td>
       </tr>
     </tbody>
@@ -112,7 +111,10 @@ function handleFrom(e) {
   } else {
     input.classList?.remove("error");
     input.nextElementSibling.innerText = "";
-    displayStudentData(value);
+    studentsDataRoot.innerHTML = "";
+    setTimeout(() => {
+      displayStudentData(value);
+    }, 300)
   }
 }
 
