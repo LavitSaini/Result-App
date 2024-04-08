@@ -358,7 +358,7 @@ function displayThirdSemesterStudentResultData(
     </thead>
     <tbody>
       <tr>
-        <td></td>
+        <td>Mentoring and Professional Development Laboratory (BMPD-302-18)</td>
         <td>${data["Mentoring and Professional Development Laboratory (BMPD-302-18)"]}</td>
       </tr>
       <tr>
