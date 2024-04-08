@@ -1,3 +1,4 @@
+function main(){
 let form = document.querySelector("form");
 let input = document.querySelector("form input");
 let studentsDataRoot = document.querySelector(".student-data");
@@ -555,3 +556,5 @@ function handleFrom(e) {
 }
 
 form.addEventListener("submit", handleFrom);
+}
+main();
