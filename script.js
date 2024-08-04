@@ -96,7 +96,6 @@
       if (data.rollNo === Number(rollNumber)) {
         let allKeys = Object.keys(data).sort();
         let maxIndex = allKeys.length - 1;
-        console.log(allKeys);
         let allSubjectsKeys = allKeys.filter((key) => key.includes(" "));
         clutter += `<ul class="student-info">
       <li>Name: ${data[allKeys[maxIndex - 2]]}</li>
@@ -115,7 +114,6 @@
     <tbody>
       ${allSubjectsKeys
         .map((subKey) => {
-          console.log(subKey);
           return `<tr>
           <td>${subKey}</td>
           <td>${data[subKey]}</td>
@@ -161,6 +159,8 @@
       displayResultTable(rollNo, semester, secondSemesterData);
     } else if (semester === "third") {
       displayResultTable(rollNo, semester, thirdSemesterData);
+    } else if(semester === "fourth"){
+      displayResultTable(rollNo, semester, fourthSemesterData);
     }
   }
 
@@ -203,7 +203,7 @@
       displayLoader();
       setTimeout(() => {
         displayStudentResult(value, semester);
-      }, 300);
+      }, 250);
     }
   }
 
